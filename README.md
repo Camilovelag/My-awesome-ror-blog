@@ -36,11 +36,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 MY AWESOME ROR BLOG <a name="about-project"></a>
 
 This app allows you to create a blog and its main features (create posts, comments, likes, users) in  a simple and smarter way. Built using Ruby on Rails and PostgreSQL.
-
-**[your_project__name]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -200,7 +198,7 @@ I would like to thank to the following people:
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+## ❓ FAQ <a name="faq"></a>
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
