@@ -1,15 +1,5 @@
 <a name="readme-top"></a>
 
-
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>MY AWESOME ROR BLOG</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -188,8 +178,6 @@ If you like this project, please give it a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
 I would like to thank to the following people:
 - [Microverse](https://www.microverse.org/)
 - [Gustavo Porcilio](https://github.com/MarcoAurelioAntonio)
@@ -199,8 +187,6 @@ I would like to thank to the following people:
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
 - **Can I use the project's author PostgreSQL database**
 
@@ -217,6 +203,5 @@ I would like to thank to the following people:
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
