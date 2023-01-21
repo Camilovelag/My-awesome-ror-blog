@@ -75,3 +75,8 @@ group :test do
 end
 
 gem 'dotenv-rails', '~> 2.8'
+
+# Rspec for testing
+group :development, :test do
+  gem 'rspec-rails', '~> 4.0.0.beta2'
+end
