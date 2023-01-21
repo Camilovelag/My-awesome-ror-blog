@@ -26,4 +26,10 @@ RSpec.describe Post, type: :model do
     Comment.create(post: post, author: @user, text: 'Hi Tom!')
     expect(post.comments_counter).to be >= 0
   end
+
+  it 'Likes_counter should be greater than or equal to zero' do
+    post = Post.create(author: @user, title: 'Hello', text: 'This is my first post')
+    Like.create(post: post, author: @user)
+    expect(post.likes_counter).to be >= 0
+  end
 end
