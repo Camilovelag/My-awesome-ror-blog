@@ -35,6 +35,3 @@
 
 # Ignore node_modules
 node_modules/
-
-app/views/users
-app/views/posts
