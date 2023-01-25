@@ -80,3 +80,6 @@ gem 'dotenv-rails', '~> 2.8'
 group :development, :test do
   gem 'rspec-rails', '~> 4.0.0.beta2'
 end
+
+# Shoulda Matchers for testing
+gem 'rails-controller-testing'
