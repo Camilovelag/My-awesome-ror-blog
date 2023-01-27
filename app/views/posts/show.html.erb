@@ -1,1 +1,23 @@
-<h1>Hi! I&apos;m a show an specific post for an specific user page</h1>
+<main>
+  <div>
+    <h1>
+      <%= @post.title %></h1>
+      by
+      <%= @post.author.name %>
+    <p>
+      Comments:
+      <%= @post.comments_counter.nil? ? 0 : @post.comments_counter %>,
+      Likes:
+      <%= @post.likes_counter.nil? ? 0 : @post.likes_counter %>
+    </p>
+    <p><%= @post.text %></p>
+  </div>
+  <div>
+    <% @post.comments.each do |comment| %>
+      <p>
+        <%= comment.author.name %>:
+        <%= comment.text %>
+      </p>
+    <% end %>
+  </div>
+</main>
