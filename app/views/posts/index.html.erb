@@ -1,1 +1,34 @@
-<h1>Hi! I&apos;m a index posts for an specific user page</h1>
+<main>
+  <div>
+    <img src=<%= @posts.first.author.photo %> alt="user photo">
+    <h1><%= @posts.first.author.name %></h1>
+    <p>
+      Number of posts:
+      <%= @posts.first.author.posts_counter.nil? ? 0 : @posts.first.author.posts_counter %>
+    </p>
+  </div>
+</main>
+<section>
+  <div>
+    <% @posts.each do |post| %>
+      <div>
+        <h2><%= post.title %></h2>
+        <p><%= post.text %></p>
+        <p>
+          Comments:
+          <%= post.comments_counter.nil? ? 0 : post.comments_counter %>,
+          Likes:
+          <%= post.likes_counter.nil? ? 0 : post.likes_counter %>
+        </p>
+      </div>
+      <div>
+        <% post.last_five_comments.each do |comment| %> 
+          <p>
+            <%= comment.author.name %>:
+            <%= comment.text %>
+          </p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</section>
