@@ -1,1 +1,11 @@
-<h1>Hi! I&apos;m an index users page</h1>
+<main>
+  <% @users.each do |user| %>
+    <div>
+      <img src=<%= user.photo %> alt="user photo">
+      <%= link_to user_path(user) do %>
+        <h1><%= user.name %></h1>
+        <p><%= user.posts_counter.nil? ? 0 : user.posts_counter %></p>
+      <% end %>
+    </div>
+  <% end %>
+</main>
