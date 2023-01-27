@@ -1,1 +1,29 @@
-<h1>Hi! I&apos;m a show an specific user page</h1>
+<main>
+  <div>
+    <img src=<%= @user.photo %> alt="user photo">
+    <h1><%= @user.name %></h1>
+    <p>
+      Number of posts:
+      <%= @user.posts_counter.nil? ? 0 : @user.posts_counter %>
+    </p>
+  </div>
+</main>
+<section>
+  <h2>Bio</h2>
+  <p><%= @user.bio %></p>
+</section>
+<section>
+  <% @user.posts.each do |post| %>
+    <div>
+      <h2><%= post.title %></h2>
+      <p><%= post.text %></p>
+      <p>
+        Comments:
+        <%= post.comments_counter.nil? ? 0 : post.comments_counter %>
+        Likes:
+        <%= post.likes_counter.nil? ? 0 : post.likes_counter %>
+      </p>
+    </div>
+  <% end %>
+</section>
+<button><%= link_to 'See all posts', user_posts_path(@user) %></button>
