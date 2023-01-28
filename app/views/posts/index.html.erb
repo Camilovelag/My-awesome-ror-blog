@@ -10,6 +10,11 @@
     </div>
   </div>
 </main>
+<section div class="container-col p-1 align-items-c">
+  <%= link_to new_user_post_path(@user) do %>
+    <button>Create new post</button>
+  <% end %>
+</section>
 <section>
   <div>
     <% @posts.each do |post| %>
