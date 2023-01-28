@@ -1,19 +1,21 @@
 <main>
-  <div class="container-col b-3">
-    <h1>
-      <%= @post.title %>
-      by
-      <%= @post.author.name %>
-    </h1>
-    <p class="ratings-box">
-      Comments:
-      <%= @post.comments_counter.nil? ? 0 : @post.comments_counter %>,
-      Likes:
-      <%= @post.likes_counter.nil? ? 0 : @post.likes_counter %>
-    </p>
+  <div class="container-col p-1 b-3">
+    <div class="container-row just-cont-sb align-items-e">
+      <h1>
+        <%= @post.title %>
+        by
+        <%= @post.author.name %>
+      </h1>
+      <p>
+        Comments:
+        <%= @post.comments_counter.nil? ? 0 : @post.comments_counter %>,
+        Likes:
+        <%= @post.likes_counter.nil? ? 0 : @post.likes_counter %>
+      </p>
+    </div>
     <p><%= @post.text %></p>
   </div>
-  <div class="container-col b-3">
+  <div class="container-col p-1 b-3">
     <%= "No comments yet" if @post.comments.length == 0 %>
     <% @post.comments.each do |comment| %>
       <p>

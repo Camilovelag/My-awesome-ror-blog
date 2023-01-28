@@ -1,9 +1,9 @@
 <main>
-<div class="container-row">
+<div class="container-row p-1">
     <img class="b-3" src=<%= @user.photo %> alt="user photo">
-    <div class="container-col b-3 full-width">
+    <div class="container-col p-1 b-3 full-width">
       <h1><%= @user.name %></h1>
-      <p class="ratings-box">
+      <p class="align-self-end">
         Number of posts:
         <%= @user.posts_counter.nil? ? 0 : @user.posts_counter %>
       </p>
@@ -15,10 +15,10 @@
     <% @posts.each do |post| %>
       <div class="mb-1">
         <%= link_to user_post_path(post.author_id, post.id) do %>
-          <div class="container-col b-3">
+          <div class="container-col p-1 b-3">
             <h2><%= post.title %></h2>
             <p><%= post.text %></p>
-            <p class="ratings-box">
+            <p class="align-self-end">
               Comments:
               <%= post.comments_counter.nil? ? 0 : post.comments_counter %>,
               Likes:
@@ -26,7 +26,7 @@
             </p>
           </div>
         <% end %>
-        <div class="container-col b-3">
+        <div class="container-col p-1 b-3">
           <%= "No comments yet" if post.comments.length == 0 %>
           <% post.last_five_comments.each do |comment| %> 
             <p>
@@ -39,6 +39,6 @@
     <% end %>
   </div>
 </section>
-<section div class="container-col center">
+<section div class="container-col p-1 align-items-c">
   <button>Pagination</button>
 </section>

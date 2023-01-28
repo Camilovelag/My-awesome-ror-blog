@@ -33,7 +33,6 @@ img {
 
 .container-row {
   display: flex;
-  padding: 1rem;
   gap: 1rem;
   align-items: center;
 }
@@ -41,10 +40,9 @@ img {
 .container-col {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
 }
 
-.ratings-box {
+.align-self-end {
   align-self: end;
 }
 
@@ -83,6 +81,18 @@ button {
   font-weight: bold;
 }
 
-.center {
+.align-items-c {
   align-items: center;
+}
+
+.align-items-e {
+  align-items: end;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.just-cont-sb {
+  justify-content: space-between;
 }
