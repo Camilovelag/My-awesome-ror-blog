@@ -24,7 +24,7 @@ class PostsController < ApplicationController
           flash[:success] = 'Post created successfully'
           redirect_to user_posts_path(current_user.id)
         else
-          flash[:notice] = 'Error: Not able to create post'
+          flash[:error] = 'Error: Not able to create post'
           render :new, locals: { post: @post }
         end
       end
