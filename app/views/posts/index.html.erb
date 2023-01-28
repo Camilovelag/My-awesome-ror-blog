@@ -27,7 +27,7 @@
           </div>
         <% end %>
         <div class="container-col b-3">
-        <%= "No comments yet" if post.comments.length == 0 %>
+          <%= "No comments yet" if post.comments.length == 0 %>
           <% post.last_five_comments.each do |comment| %> 
             <p>
               <%= comment.author.name %>:
