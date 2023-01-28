@@ -24,14 +24,11 @@ html * {
 
 body {
   padding: 2rem 10rem;
-  background-image: url(https://as1.ftcdn.net/v2/jpg/03/18/56/50/1000_F_318565055_dURCeKySMi1sUL4KeU97HzzLoRZdtAYN.jpg);
-  background-repeat: repeat;
 }
 
 img {
   width: 8rem;
   height: 8rem;
-  background-color: #fff;
 }
 
 .container-row {
@@ -45,7 +42,6 @@ img {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: aliceblue;
 }
 
 .ratings-box {
@@ -78,5 +74,15 @@ a {
 a:hover {
   cursor: pointer;
   color: red;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+
+button {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.center {
+  align-items: center;
 }
