@@ -15,7 +15,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'body should contain an specific text' do
-      placeholder = 'Hi! I&apos;m an index users page'
+      placeholder = 'Tom'
       expect(response.body).to include(placeholder)
     end
   end
@@ -34,7 +34,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'body should contain an specific text' do
-      placeholder = 'Hi! I&apos;m a show an specific user page'
+      placeholder = 'Teacher from Mexico.'
       expect(response.body).to include(placeholder)
     end
   end
@@ -55,7 +55,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'body should contain an specific text' do
-      placeholder = 'Hi! I&apos;m a index posts for an specific user page'
+      placeholder = 'This is my first post'
       expect(response.body).to include(placeholder)
     end
   end
@@ -74,7 +74,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'body should contain an specific text' do
-      placeholder = 'Hi! I&apos;m a show an specific post for an specific user page'
+      placeholder = 'No comments yet'
       expect(response.body).to include(placeholder)
     end
   end

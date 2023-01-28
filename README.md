@@ -102,6 +102,7 @@ Example commands:
 ```sh
   cd my-folder
   git clone git@github.com:Camilovelag/My-awesome-ror-blog.git
+  cd My-awesome-ror-blog
 ```
 
 ### Install
@@ -109,30 +110,26 @@ Example commands:
 Install this project with:
 
 ```sh
-  cd my-project
-  gem install
+  bundle install
+  rails db:create
+  rails db:migrate
 ```
 
-### Usage
+### Start
 
-To run the project, execute the following command:
+To start the application, run the following command:
+
+```sh
+  rails s
+```
 
 ### Run tests
 
 To run tests, run the following command:
 
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
 ```sh
-
+  rspec
 ```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,7 +159,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Camilovelag/My-awesome-ror-blog/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
