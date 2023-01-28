@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+
+html * {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 2rem 10rem;
+}
+
+img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.container-row {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.container-col {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.ratings-box {
+  align-self: end;
+}
+
+.b-3 {
+  border: 3px solid #000;
+  border-radius: 5px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.display-none {
+  display: none;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}

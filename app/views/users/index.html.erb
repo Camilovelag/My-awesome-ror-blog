@@ -1,13 +1,15 @@
 <main>
   <% @users.each do |user| %>
-    <div>
-      <img src=<%= user.photo %> alt="user photo">
+    <div class="container-row">
+      <img class="b-3" src=<%= user.photo %> alt="user photo">
       <%= link_to user_path(user) do %>
-        <h1><%= user.name %></h1>
-        <p>
-          Number of posts:
-          <%= user.posts_counter.nil? ? 0 : user.posts_counter %>
-        </p>
+        <div class="container-col b-3 full-width">
+          <h1><%= user.name %></h1>
+          <p class="ratings-box">
+            Number of posts:
+            <%= user.posts_counter.nil? ? 0 : user.posts_counter %>
+          </p>
+        </div>
       <% end %>
     </div>
   <% end %>

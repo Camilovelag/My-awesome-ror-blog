@@ -1,23 +1,25 @@
 <main>
-  <div>
-    <img src=<%= @user.photo %> alt="user photo">
-    <h1><%= @user.name %></h1>
-    <p>
-      Number of posts:
-      <%= @user.posts_counter.nil? ? 0 : @user.posts_counter %>
-    </p>
+  <div class="container-row">
+    <img class="b-3" src=<%= @user.photo %> alt="user photo">
+    <div class="container-col b-3 full-width">
+      <h1><%= @user.name %></h1>
+      <p class="ratings-box">
+        Number of posts:
+        <%= @user.posts_counter.nil? ? 0 : @user.posts_counter %>
+      </p>
+    </div>
   </div>
 </main>
-<section>
+<section class="container-col b-3 mb-1">
   <h2>Bio</h2>
   <p><%= @user.bio %></p>
 </section>
 <section>
   <% @user.posts.each do |post| %>
-    <div>
+    <div class="container-col b-3 mb-1">
       <h2><%= post.title %></h2>
       <p><%= post.text %></p>
-      <p>
+      <p class="ratings-box">
         Comments:
         <%= post.comments_counter.nil? ? 0 : post.comments_counter %>,
         Likes:
