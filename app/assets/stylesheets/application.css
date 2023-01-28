@@ -14,18 +14,24 @@
  *= require_self
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 html * {
   padding: 0;
   margin: 0;
+  font-family: 'Andada Pro', serif;
 }
 
 body {
   padding: 2rem 10rem;
+  background-image: url(https://as1.ftcdn.net/v2/jpg/03/18/56/50/1000_F_318565055_dURCeKySMi1sUL4KeU97HzzLoRZdtAYN.jpg);
+  background-repeat: repeat;
 }
 
 img {
   width: 8rem;
   height: 8rem;
+  background-color: #fff;
 }
 
 .container-row {
@@ -39,6 +45,7 @@ img {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  background-color: aliceblue;
 }
 
 .ratings-box {
@@ -60,4 +67,16 @@ img {
 
 .mb-1 {
   margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+
+a:hover {
+  cursor: pointer;
+  color: red;
+  font-size: 1.2rem;
 }

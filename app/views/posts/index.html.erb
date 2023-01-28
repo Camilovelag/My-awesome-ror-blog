@@ -1,11 +1,11 @@
 <main>
 <div class="container-row">
-    <img class="b-3" src=<%= @posts.first.author.photo %> alt="user photo">
+    <img class="b-3" src=<%= @user.photo %> alt="user photo">
     <div class="container-col b-3 full-width">
-      <h1><%= @posts.first.author.name %></h1>
-      <p>
+      <h1><%= @user.name %></h1>
+      <p class="ratings-box">
         Number of posts:
-        <%= @posts.first.author.posts_counter.nil? ? 0 : @posts.first.author.posts_counter %>
+        <%= @user.posts_counter.nil? ? 0 : @user.posts_counter %>
       </p>
     </div>
   </div>
