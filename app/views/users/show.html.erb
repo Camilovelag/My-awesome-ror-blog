@@ -29,5 +29,6 @@
   <% end %>
 </section>
 <section div class="container-col p-1 align-items-c">
-  <button><%= link_to 'See all posts', user_posts_path(@user) %></button>
+  <%= button_to "See all posts", user_posts_path(@user), method: "get" %>
+  <%= button_to "Back to Users", users_path, method: "get" %>
 </section>

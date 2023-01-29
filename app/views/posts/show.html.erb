@@ -25,9 +25,8 @@
     <% end %>
   </div>
   <div div class="container-col p-1 align-items-c">
-    <%= link_to new_user_post_comment_path(@user, @post) do %>
-      <button>Comment</button>
-    <% end %>
+    <%= button_to "Comment", new_user_post_comment_path(@user, @post), method: "get" %>
     <%= button_to "Like", like_path(@user, @post), method: "put" %>
+    <%= button_to "Back to Posts", user_posts_path(@user), method: "get" %>
   </div>
 </main>

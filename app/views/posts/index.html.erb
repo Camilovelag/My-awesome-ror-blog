@@ -10,11 +10,6 @@
     </div>
   </div>
 </main>
-<section div class="container-col p-1 align-items-c">
-  <%= link_to new_user_post_path(@user) do %>
-    <button>Create new post</button>
-  <% end %>
-</section>
 <section>
   <div>
     <% @posts.each do |post| %>
@@ -46,4 +41,6 @@
 </section>
 <section div class="container-col p-1 align-items-c">
   <button>Pagination</button>
+  <%= button_to "New Post", new_user_post_path(@user), method: "get" %>
+  <%= button_to "Back to User", user_path(@user), method: "get" %>
 </section>
