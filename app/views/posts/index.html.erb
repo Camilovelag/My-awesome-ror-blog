@@ -11,6 +11,9 @@
   </div>
 </main>
 <section>
+  <div class="container-col p-1 align-items-c">
+    <%= "No posts yet" if @posts.length == 0 %>
+  </div>
   <div>
     <% @posts.each do |post| %>
       <div class="mb-1">

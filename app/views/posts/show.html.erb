@@ -27,7 +27,9 @@
   <div div class="container-col p-1 align-items-c">
     <div class="container-row p-1 just-cont-c">
       <%= button_to "Comment", new_user_post_comment_path(@user, @post), method: "get" %>
-      <%= button_to "Like", like_path(@user, @post), method: "put" %>
+      <%= form_with model: @like, url: user_post_likes_path(post_id: @post.id) do |form| %>
+        <%= form.submit "Like" %>
+      <% end %>
     </div>
     <%= button_to "Back to Posts", user_posts_path(@user), method: "get" %>
   </div>
