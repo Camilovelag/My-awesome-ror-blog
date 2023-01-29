@@ -1,12 +1,18 @@
 <main>
-  <h1>New Post</h1>
-  <%= form_with model: Post, url: user_posts_path, method: :post, local: true do |f| %>
-    <div>
-      <%= f.text_field :title, placeholder: "Title" %>
-    </div>
-    <div>
-      <%= f.text_area :text, placeholder: "Text goes here" %>
-    </div>
-    <%= f.submit "Post" %>
-  <% end %>
+  <div div class="container-col p-1 align-items-c">
+    <h1>New Post</h1>
+    <%= form_with model: Post, url: user_posts_path, method: :post, local: true do |f| %>
+      <div div class="container-row p-1 align-items-c">
+        <%= f.label :title %>
+        <%= f.text_field :title, placeholder: "Title" %>
+      </div>
+      <div div class="container-row p-1 align-items-c">
+        <%= f.label :text %>
+        <%= f.text_area :text, placeholder: "Text goes here", cols:"30", rows:"10" %>
+      </div>
+      <div div class="container-col p-1 align-items-c">
+        <%= f.submit "Post" %>
+      </div>
+    <% end %>
+  </div>
 <main>

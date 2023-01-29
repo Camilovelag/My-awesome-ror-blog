@@ -1,9 +1,13 @@
 <main>
-  <h1>New comment</h1>
-  <%= form_with model: Comment, url: user_post_comments_path, method: :post, local: true do |f| %>
-    <div>
-      <%= f.text_area :text, placeholder: "Add your comment" %>
-    </div>
-    <%= f.submit "Comment" %>
-  <% end %>
+  <div div class="container-col p-1 align-items-c">
+    <h1>New comment</h1>
+    <%= form_with model: Comment, url: user_post_comments_path, method: :post, local: true do |f| %>
+      <div div class="container-col p-1 align-items-c">
+        <%= f.text_area :text, placeholder: "Add your comment here...", cols:"30", rows:"10" %>
+      </div>
+      <div div class="container-col p-1 align-items-c">
+        <%= f.submit "Comment" %>
+      </div>
+    <% end %>
+  </div>
 </main>
