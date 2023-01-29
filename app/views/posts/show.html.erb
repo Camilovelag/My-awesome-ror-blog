@@ -15,11 +15,6 @@
     </div>
     <p><%= @post.text %></p>
   </div>
-  <section div class="container-col p-1 align-items-c">
-  <%= link_to new_user_post_comment_path(@post.author.id, @post) do %>
-    <button>Create new comment</button>
-  <% end %>
-  </section>
   <div class="container-col p-1 b-3">
     <%= "No comments yet" if @post.comments.length == 0 %>
     <% @post.comments.each do |comment| %>
@@ -28,5 +23,11 @@
         <%= comment.text %>
       </p>
     <% end %>
+  </div>
+  <div div class="container-col p-1 align-items-c">
+    <%= link_to new_user_post_comment_path(@user, @post) do %>
+      <button>Comment</button>
+    <% end %>
+    <%= button_to "Like", like_path(@user, @post), method: "put" %>
   </div>
 </main>

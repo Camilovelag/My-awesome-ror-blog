@@ -9,4 +9,6 @@ Rails.application.routes.draw do
       resources :comments, only: [:new, :create]
     end
   end
+
+  put '/users/:user_id/posts/:post_id/like', to: 'posts#like', as: 'like'
 end
