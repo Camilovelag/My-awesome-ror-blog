@@ -24,4 +24,11 @@
       </p>
     <% end %>
   </div>
+  <div div class="container-col p-1 align-items-c">
+    <div class="container-row p-1 just-cont-c">
+      <%= button_to "Comment", new_user_post_comment_path(@user, @post), method: "get" %>
+      <%= button_to "Like", user_post_likes_path(post_id: @post.id), method: "post" %>
+    </div>
+    <%= button_to "Back to Posts", user_posts_path(@user), method: "get" %>
+  </div>
 </main>

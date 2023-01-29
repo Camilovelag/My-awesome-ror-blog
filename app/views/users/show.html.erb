@@ -15,6 +15,9 @@
   <p><%= @user.bio %></p>
 </section>
 <section>
+  <div class="container-col p-1 align-items-c">
+    <%= "No posts yet" if @user.posts.length == 0 %>
+  </div>
   <% @user.posts.each do |post| %>
     <div class="container-col p-1 b-3 mb-1">
       <h2><%= post.title %></h2>
@@ -28,6 +31,7 @@
     </div>
   <% end %>
 </section>
-<section div class="container-col p-1 align-items-c">
-  <button><%= link_to 'See all posts', user_posts_path(@user) %></button>
+<section div class="container-row p-1 just-cont-c">
+  <%= button_to "See all posts", user_posts_path(@user), method: "get" %>
+  <%= button_to "Back to Users", users_path, method: "get" %>
 </section>

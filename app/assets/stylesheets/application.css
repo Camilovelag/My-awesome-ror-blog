@@ -46,6 +46,10 @@ img {
   align-self: end;
 }
 
+.just-self-e {
+  justify-self: end;
+}
+
 .b-3 {
   border: 3px solid #000;
   border-radius: 5px;
@@ -75,7 +79,8 @@ a:hover {
   font-size: 1.3rem;
 }
 
-button {
+button,
+input {
   padding: 0.5rem;
   font-size: 1.1rem;
   font-weight: bold;
@@ -95,4 +100,8 @@ button {
 
 .just-cont-sb {
   justify-content: space-between;
+}
+
+.just-cont-c {
+  justify-content: center;
 }
