@@ -19,16 +19,18 @@
     <%= "No posts yet" if @user.posts.length == 0 %>
   </div>
   <% @user.posts.each do |post| %>
-    <div class="container-col p-1 b-3 mb-1">
-      <h2><%= post.title %></h2>
-      <p><%= post.text %></p>
-      <p class="align-self-end">
-        Comments:
-        <%= post.comments_counter.nil? ? 0 : post.comments_counter %>,
-        Likes:
-        <%= post.likes_counter.nil? ? 0 : post.likes_counter %>
-      </p>
-    </div>
+    <%= link_to user_post_path(post.author_id, post.id) do %>
+      <div class="container-col p-1 b-3 mb-1">
+        <h2><%= post.title %></h2>
+        <p><%= post.text %></p>
+        <p class="align-self-end">
+          Comments:
+          <%= post.comments_counter.nil? ? 0 : post.comments_counter %>,
+          Likes:
+          <%= post.likes_counter.nil? ? 0 : post.likes_counter %>
+        </p>
+      </div>
+    <% end %>
   <% end %>
 </section>
 <section div class="container-row p-1 just-cont-c">
