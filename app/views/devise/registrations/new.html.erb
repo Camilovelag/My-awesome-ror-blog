@@ -1,6 +1,6 @@
 <main class="index_container">
   <h2>Sign up</h2>
-  <div class='form_style'>
+  <div class='form_style sign-up-form'>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -42,6 +42,7 @@
       </div>
 
     <% end %>
+    <%= render "devise/shared/links" %>
   </div>
-  <%= render "devise/shared/links" %>
+  
 </main>

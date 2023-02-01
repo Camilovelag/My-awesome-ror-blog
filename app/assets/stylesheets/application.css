@@ -105,3 +105,9 @@ input {
 .just-cont-c {
   justify-content: center;
 }
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
