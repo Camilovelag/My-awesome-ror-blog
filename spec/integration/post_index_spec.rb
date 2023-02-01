@@ -1,14 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe 'Post Index Page', type: :feature do
-
   before(:each) do
     @user = User.create(name: 'Doraemon & Nobita', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
                         bio: 'Best friends', posts_counter: 12)
     @post = Post.create(title: 'Physics', text: 'This is not my first post', comments_counter: 10, likes_counter: 10,
                         author: @user)
     @comment = Comment.create(text: 'First comment', author_id: @user.id, post_id: @post.id)
-
   end
 
   describe 'Posst show page' do
@@ -20,23 +18,23 @@ RSpec.describe 'Post Index Page', type: :feature do
 
     it "shows the user's username" do
       expect(page).to have_content(@user.name)
-    end      
+    end
 
-    it "shows the number of posts the user has written" do
+    it 'shows the number of posts the user has written' do
       expect(page).to have_content("Number of posts: #{@user.posts_counter}")
     end
 
     it "shows a post's title" do
-      within("h2") do
+      within('h2') do
         expect(page).to have_content(@user.posts.first.title)
       end
     end
 
     it 'shows some of the posts body' do
-      expect(page).to have_content (@post.text)
+      expect(page).to have_content(@post.text)
     end
 
-    it "displays the first comments on a post" do
+    it 'displays the first comments on a post' do
       expect(page).to have_content(@comments.first.text)
     end
 
