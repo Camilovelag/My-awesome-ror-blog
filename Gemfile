@@ -83,3 +83,5 @@ end
 
 # Shoulda Matchers for testing
 gem 'rails-controller-testing'
+
+gem 'devise'
