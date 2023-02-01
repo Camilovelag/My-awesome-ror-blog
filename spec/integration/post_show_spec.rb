@@ -8,7 +8,7 @@ RSpec.describe 'Post Show', type: :system do
         bio: 'Full Stack Web Developer',
         photo: 'https://avatars.kanzatehreen.com'
       )
-     
+
       @user1 = User.create(
         name: 'Camilo Vela',
         bio: 'Web Developer',

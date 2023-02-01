@@ -3,13 +3,12 @@ require 'rails_helper'
 RSpec.describe 'Post Index Page', type: :feature do
   before(:each) do
     @user = User.create(name: 'Doraemon & Nobita', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                        bio: 'Best friends', posts_counter: 12)
-    @post = Post.create(title: 'Physics', text: 'This is not my first post', comments_counter: 10, likes_counter: 10,
-                        author: @user)
+                        bio: 'Best friends')
+    @post = Post.create(title: 'Physics', text: 'This is not my first post', author: @user)
     @comment = Comment.create(text: 'First comment', author_id: @user.id, post_id: @post.id)
   end
 
-  describe 'Posst show page' do
+  describe 'Post show page' do
     before(:each) { visit "/users/#{@user.id}/posts" }
 
     it "shows the user's profile picture" do
@@ -35,15 +34,15 @@ RSpec.describe 'Post Index Page', type: :feature do
     end
 
     it 'displays the first comments on a post' do
-      expect(page).to have_content(@comments.first.text)
+      expect(page).to have_content('First comment')
     end
 
     it 'shows how many comments a post has.' do
-      expect(page).to have_content("Comments: #{post.comments_counter}")
+      expect(page).to have_content("Comments: #{@post.comments_counter}")
     end
 
     it 'shows how many likes a post has.' do
-      expect(page).to have_content("Likes: #{post.likes_counter}")
+      expect(page).to have_content("Likes: #{@post.likes_counter}")
     end
 
     it 'shows a section for pagination if there are more posts than fit on the view' do
