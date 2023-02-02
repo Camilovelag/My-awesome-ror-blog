@@ -5,7 +5,7 @@
       <h1><%= @user.name %></h1>
       <p class="align-self-end">
         Number of posts:
-        <%= @user.posts_counter.nil? ? 0 : @user.posts_counter %>
+        <%= @user.posts_counter %>
       </p>
     </div>
   </div>
@@ -23,9 +23,9 @@
             <p><%= post.text %></p>
             <p class="align-self-end">
               Comments:
-              <%= post.comments_counter.nil? ? 0 : post.comments_counter %>,
+              <%= post.comments_counter %>,
               Likes:
-              <%= post.likes_counter.nil? ? 0 : post.likes_counter %>
+              <%= post.likes_counter %>
             </p>
           </div>
         <% end %>
