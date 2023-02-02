@@ -137,6 +137,7 @@ input {
 #user_remember_me {
   width: inherit;
 }
+
 .login_container div {
   display: flex;
   margin: 2em 0;
@@ -144,7 +145,7 @@ input {
 
 .login_container div:nth-child(5) {
   gap: 1em;
-  justify-content: center
+  justify-content: center;
 }
 
 .login_container #user_email,
