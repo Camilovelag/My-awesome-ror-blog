@@ -61,10 +61,10 @@ This project was built using mainly Ruby on Rails for both front-end and back-en
 
 ### Key Features <a name="key-features"></a>
 
-- **[Create posts, users, likes, and commments ]**
-- **[Edit and delete posts]**
-- **[Save information]**
-- **[Handle user's permissions]**
+- **Create posts, users, likes, and commments**
+- **Edit and delete posts**
+- **Save information**
+- **Handle user's permissions**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,10 +86,11 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
+- [Ruby](https://www.ruby-lang.org/en/) v.3.1.3 
 
-```sh
- gem install rails
-```
+- [Ruby on Rails](https://rubyonrails.org/) v.7.0
+
+- [PostgreSQL](https://www.postgresql.org/)
 
 
 ### Setup
